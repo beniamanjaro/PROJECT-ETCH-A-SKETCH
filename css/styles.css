@@ -1,0 +1,61 @@
+h1 {
+    font-family: 'Ribeye Marrow', cursive;
+    font-size: 70px;
+    margin: auto;
+    text-align: center;
+    cursor: default;
+}
+
+header {
+    text-align: center;
+}
+
+button {
+    margin: 20px;
+    padding: 6px 35px 6px 35px;
+    font-size: 16px;
+    border-radius: 7px;
+    border: 2px solid silver;
+}
+
+button:hover {
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+:root {
+    --grid-cols: 1;
+    --grid-rows: 1;
+}
+
+.grid-container {
+    display: grid;
+    margin: auto;
+    width: 800px;
+    height: 600px;
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+}
+
+.gridSquare {
+    border: 1px solid silver;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    margin-top: 130px;
+}
