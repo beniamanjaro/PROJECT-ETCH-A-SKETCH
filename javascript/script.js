@@ -1,7 +1,8 @@
 const gridContainer = document.querySelector('.grid-container')
 const btn = document.querySelector('.btn');
+let gridSquares = document.querySelectorAll('.gridSquare')
 
-function getGrid(num){
+function getGrid(num) {
     gridContainer.style.setProperty('--grid-rows', num)
     gridContainer.style.setProperty('--grid-cols', num)
     for (c = 0; c < (num * num); c++){
@@ -9,12 +10,30 @@ function getGrid(num){
         gridContainer.appendChild(cell).className = 'gridSquare'; 
     };
 };
-getGrid(16);
 
-let gridSquares = document.querySelectorAll('.gridSquare')
+function clearGrid() {
+    $(".gridSquare").remove();
+}
 
-gridSquares.forEach((gridSquare) => {
-    gridSquare.addEventListener('mouseover', () => {
-        gridSquare.style.backgroundColor = 'black';
-    })
-})
+function refreshGrid() {
+    let x = prompt("Enter the grid size:")
+    clearGrid()
+    getGrid(x);
+}
+
+
+$(document).ready(function() {
+    getGrid(16);
+
+    $(".gridSquare").mouseover(function() {
+        $(this).css("background-color", "black");
+        });
+
+    $(".btn").click(function() {
+        refreshGrid();
+
+        $(".gridSquare").mouseover(function() {
+        $(this).css("background-color", "black");
+        });
+    });
+});
