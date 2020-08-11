@@ -2,6 +2,11 @@
     outline: none;
 }
 
+body {
+    height: auto;
+    background: radial-gradient(circle, rgba(238,236,174,1) 0%, rgba(148,198,233,1) 100%);
+}
+
 h1 {
     font-family: 'Ribeye Marrow', cursive;
     font-size: 70px;
@@ -47,5 +52,5 @@ button:hover {
 }
 
 footer {
-    margin-top: 130px;
+    margin-top: 133px;
 }

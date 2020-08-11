@@ -17,8 +17,15 @@ function clearGrid() {
 
 function refreshGrid() {
     let x = prompt("Enter the grid size:")
-    clearGrid()
-    getGrid(x);
+    x = Number(x);
+    if(x < 1 || isNaN(x) || x > 60){
+        alert("stop being a sheboon and choose a positive number lower than 60")
+        clearGrid();
+        getGrid(16);
+    } else{
+        clearGrid();
+        getGrid(x);
+    }
 }
 
 
